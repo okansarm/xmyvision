@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Domain For Sale – xmyvision.shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --border: #2a2a3a;
+      --accent: #c8a96e;
+      --accent-dim: rgba(200, 169, 110, 0.15);
+      --text: #e8e4dc;
+      --muted: #7a7a8a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Background grid */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    /* Radial glow */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(200,169,110,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 3.5rem 4rem;
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      opacity: 0;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(200,169,110,0.3);
+      padding: 0.3rem 0.9rem;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.8s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .domain {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      animation: fadeUp 0.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .domain span { color: var(--accent); }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+      margin: 1.8rem auto;
+      animation: fadeUp 0.8s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .message {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.8;
+      letter-spacing: 0.01em;
+      margin-bottom: 2.2rem;
+      animation: fadeUp 0.8s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--accent-dim);
+      border: 1px solid rgba(200,169,110,0.4);
+      color: var(--accent);
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      padding: 0.85rem 1.8rem;
+      transition: background 0.25s, border-color 0.25s, transform 0.2s;
+      animation: fadeUp 0.8s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .contact-btn:hover {
+      background: rgba(200,169,110,0.25);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .contact-btn svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.65rem;
+      color: #3a3a4a;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      animation: fadeUp 0.8s 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="tag">Domain For Sale</div>
+
+    <div class="domain">xmyvision<span>.shop</span></div>
+
+    <div class="divider"></div>
+
+    <p class="message">
+      This domain is available for purchase.<br/>
+      If you're interested in acquiring it, reach out directly<br/>and we'll make it happen.
+    </p>
+
+    <a href="mailto:owner@xmyvision.shop" class="contact-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m2 7 10 7 10-7"/>
+      </svg>
+      owner@xmyvision.shop
+    </a>
+
+    <div class="footer">© 2026 xmyvision.shop</div>
+  </div>
+
+</body>
+</html>
